@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Firebase</title>
+        <script src="https://www.gstatic.com/firebasejs/7.14.2/firebase-app.js"></script>
+        <script src="https://www.gstatic.com/firebasejs/7.14.2/firebase-firestore.js"></script>
+        
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+        <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+        <style>
+            * {
+                margin: 0;
+                padding: 0;
+            }
+
+            ul {
+                display: flex;
+                flex-wrap: wrap;
+            }
+
+            ul li {
+                margin-bottom: 15px;
+                margin-left: 0;
+                list-style-type: none;
+                background-color: #ddd;
+                margin-right: 30px;
+                padding: 10px;
+                word-wrap: break-word;
+            }
+
+            .sign-up {
+                margin-top: 15px;
+            }
+
+            .users {
+                width: 100%;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="sign-up">
+                        <h3>Sign Up Form</h3>
+                        <hr />
+                        <form class="form">
+                            <div class="form-group">
+                                <label for="exampleInputEmail1">Email address</label>
+                                <input type="email" class="form-control" name="email" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Email">
+                            </div>
+                            <div class="form-group">
+                                <label for="exampleInputEmail1">Username</label>
+                                <input type="text" class="form-control" name="username" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Username">
+                            </div>
+                            <div class="form-group">
+                                <label for="exampleInputEmail1">Password</label>
+                                <input type="password" class="form-control" name="password" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Password">
+                            </div>
+                            <button type="submit" class="btn btn-primary">Submit</button>
+                        </form>
+                        <br />
+                        
+                    </div>
+                    <div class="users">
+                        <h3>Users</h3>
+                        <hr />
+                        <ul class="users-list"></ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Scripts -->
+        <!-- The core Firebase JS SDK is always required and must be listed first -->
+        
+
+        <!-- TODO: Add SDKs for Firebase products that you want to use
+        https://firebase.google.com/docs/web/setup#available-libraries -->
+        <script src="https://www.gstatic.com/firebasejs/7.14.2/firebase-analytics.js"></script>
+
+        <script>
+        var firebaseConfig = {
+            apiKey: "AIzaSyCMnbQgIfhbZM0-9h5xK1RmqHglU66Ao-Q",
+            authDomain: "testvent-b3a65.firebaseapp.com",
+            databaseURL: "https://testvent-b3a65.firebaseio.com",
+            projectId: "testvent-b3a65",
+            storageBucket: "testvent-b3a65.appspot.com",
+            messagingSenderId: "1093607870595",
+            appId: "1:1093607870595:web:c6504f9f9e63cd55abcbb6",
+            measurementId: "G-8M5V27QFN6"
+        };
+        firebase.initializeApp(firebaseConfig);
+        firebase.analytics();
+        const db = firebase.firestore();
+        </script>
+        <script src="app.js"></script>
+    </body>
+</html>
